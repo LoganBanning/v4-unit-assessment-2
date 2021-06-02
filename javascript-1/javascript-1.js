@@ -9,7 +9,7 @@
 */
 
 //CODE HERE
-
+let myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77];
 
 ////////////////////PROBLEM 2////////////////////
 /*
@@ -21,7 +21,7 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
-
+let foundZ = nestedLetters[5][2][1];
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -37,7 +37,7 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+let animals = [...forest, ...ocean, ...savannah, ...desert];
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -45,7 +45,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+let animalsCopy = [...animals, 'elephant'];
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -56,7 +56,17 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+let compareNums = (num1, num2) => {
+    if(num1 > num2) {
+        return num1;
+    } else if(num2 > num1) {
+        return num2;
+    } else if(num1 === num2) {
+        return num1;
+    } else if(num1 === num2) {
+        return num2;
+    }
+}
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -68,7 +78,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  bestMovie = (title) => `${title} is the best movie ever!`;
+//   bestMovie = (title) => {return `${title} is the best movie ever!`}
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -76,7 +87,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  jsNinja = () => 'I am a JavaScript ninja!'
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -97,7 +108,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  delete gameInfo.rating;
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -119,7 +130,15 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+// let newShapes = []  
+
+// for(key in shapes) {
+//     if(key = % 2 == 1) {
+//         delete.key;
+//     }
+// }
+
+
   
 ////////////////////PROBLEM 9////////////////////
 
@@ -161,7 +180,15 @@ const classes = [
 */
 
 //CODE HERE
-
+//   for(let i = 0; i < classes.length; i++) {
+//     for(let j = i + 1; j < classes.length; j++){
+//         if(classes.inPerson == true){
+//             return false;
+//         } else if(class.homework == true) {
+//             return false;
+//         }
+//     }
+//   }
   
 ////////////////////PROBLEM 10////////////////////
 /*
