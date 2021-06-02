@@ -12,6 +12,7 @@ align-items: center;
 justify-content: space-around;
 font-size: x-large;
 position: sticky;
+align-self: flex-start;
 }
 h1 {
   color: rgb(42, 171, 226);
@@ -31,6 +32,10 @@ nav {
 }
 .links {
   color: rgb(255, 255, 255);
+}
+.links:hover{
+  cursor: pointer;
+  color:rgb(42, 171, 226);
 }
 .middle-content {
   display: flex;
@@ -65,16 +70,32 @@ nav {
 pop-art {
   width: 250px;
   text-align: center;
+  padding-left: 10px;
 }
 .img-gallery {
   display: flex;
   width: 80vw;
 }
+.img-gal-text {
+  position: absolute;
+  left: 15%;
+  bottom: 5%
+}
+.view-larger {
+  position: absolute;
+  left: 70%;
+  color:rgb(42, 171, 226);
+  font-weight: bold;
+}
+.view-larger:hover {
+  cursor: pointer;
+  font-size: large;
+}
 footer {
   background-color: rgb(42, 171, 226);
   width: 100vw;
-  height: 100px;
-  padding: 20px 0 0 30px;
+  height: 75px;
+  padding: 3px 0 0 30px;
   font-size: x-large;
 }
 .paragraphs {
@@ -99,6 +120,9 @@ footer {
   width: 300px;
   height: 200px;
   margin-top: 50px;
+}
+.image:hover {
+  cursor: pointer;
 }
 
   
