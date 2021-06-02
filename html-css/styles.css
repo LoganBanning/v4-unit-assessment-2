@@ -46,12 +46,13 @@ nav {
   width: 200px;
   height: 300px;
   box-shadow: 5px 10px;
+  text-align: center;
 }
 .picture {
   margin-top: 100px;
   width: 250px;
   height: 250px;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 5px 15px 5px #000000
 }
 .articles {
   margin-top: 150px;
@@ -82,13 +83,22 @@ footer {
 .imgs {
   display: flex;
   flex-wrap: wrap;
-  width: 80vw;
-  justify-content: space-around;
-
+  width: 60vw;
+  justify-content: space-between;
+  padding-left: 15%;
+}
+.imgs-2{
+  display: flex;
+  flex-wrap: wrap;
+  width: 60vw;
+  justify-content: space-between;
+  padding-left: 15%;
+  margin-bottom: 100px;
 }
 .image {
-  width: 150px;
+  width: 300px;
   height: 200px;
+  margin-top: 50px;
 }
 
   
