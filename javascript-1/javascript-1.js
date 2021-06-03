@@ -217,8 +217,9 @@ let pairsArray = []
 //CODE HERE
 
 // for(let i = 0; i < lettersToPair.length; i++){
-
-// }
+//     for(let j = i + 1; j < lettersToPair.length; j++){
+//       if(lettersToPair[i] === lettersToPair[j]) {
+//         lettersToPair.push(pairsArray);
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
 /*
@@ -304,9 +305,9 @@ function teachTrick(trick) {
 */
 
 //CODE HERE
-// function dogIntro(treat, toy) {
-//     return `${this.name} is a ${this.breed} that loves ${this.treat} and their ${this.toy}!`
-// }
+function dogIntro(treat, toy) {
+    return `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`
+}
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -315,7 +316,7 @@ function teachTrick(trick) {
 */
 
 //CODE HERE
-//   let fidoIntro = dogIntro.apply(fido, 'chicken', 'tennis ball');
+  let fidoIntro = dogIntro.apply(fido,[ 'chicken', 'tennis ball']);
 
 ////////////////////PROBLEM 15////////////////////
 /*
