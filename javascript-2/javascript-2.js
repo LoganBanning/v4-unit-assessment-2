@@ -36,6 +36,20 @@ let foods = [
 */
 
 //CODE HERE
+// foods.forEach(function(element, index, array) {
+  
+  
+//   if(element === 'carbs') {
+//     foods[index] = element * 4;
+//   }
+//   else if(element === 'protein') {
+//     foods[index] = element * 4;
+//   }
+//   else if(element === 'fat') {
+//     foods[index] = element * 9;
+//   }
+//   return foods[index]
+// });
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -81,6 +95,12 @@ const products = [
 */
 
 //CODE HERE
+let saleProducts = products.map(function(element, index, array){
+  if(element === 'price') {
+    return 'price' * .75;
+  }
+})
+
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -90,6 +110,11 @@ const products = [
   (Hint: look up the array method 'includes' on MDN)
 */
 
+// let blueProducts = products.filter(function filterBlueProducts(
+//   if(products.color.includes('blue')) {
+//     return products.name;
+//   }
+// ))
 //CODE HERE
 
 ////////////////////PROBLEM 4////////////////////
@@ -130,7 +155,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+let helensInfo = Object.assign(contactInfo, shippingInfo);
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
@@ -139,14 +164,14 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+let ellensInfo = {...helensInfo, name: 'Ellen', email: 'ellen@email.com'};
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
 //CODE HERE
-
+let {email} = ellensInfo;
 ////////////////////PROBLEM 8////////////////////
 /*
   In a single expression (one line), save the zip code and state 
@@ -154,14 +179,14 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+let {zipCode, state} = shippingInfo;
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
   Use the userInfo object below to complete problems 9-11.
 */
 
 //DO NOT EDIT CODE BELOW
-const userInfo = {
+const userInfo = { //userinfo.comments.responses[0].userId;
   name: 'gn@rly_c0der_007',
   password: 'reallySuperSecret1',
   settings: {
@@ -214,7 +239,7 @@ const userInfo = {
   Set the value of shouldAlert to the value of alerts in gn@rly_c0der_007's settings
   using dot notation.
 */
-
+let shouldAlert = userInfo.settings.alerts;
 //CODE HERE
 
 ////////////////////PROBLEM 10////////////////////
@@ -224,7 +249,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+let topic = userInfo.topics[3];
 ////////////////////PROBLEM 11////////////////////
 /*
   Set the value of commenterId below to the userId of the first response to 
@@ -232,7 +257,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+// let commenterId = userinfo.comments.responses[0].userId;
 ////////////////////PROBLEM 12////////////////////
 /*
   Create an object called 'person' that has the following properties. 
@@ -251,6 +276,33 @@ const userInfo = {
 */
 
 //CODE HERE
+let person = {
+  name: "Logan",
+  age: 30,
+  jobs: ['mechanic', 'dev', 'sales'],
+  birthday: function() {
+    let age = ++this.age
+    return age;
+  }, //that adds 1 to the age, use the 'this' keyword to access age
+  favorites: {
+  color: 'orange',
+  number: 1,
+  book: 'The Alchemist'
+  },
+  kids: [
+    {
+      name: 'Parker',
+      age: 7,
+    },
+    {
+      name: 'Junior',
+      age: 5,
+    },
+  ]
+}
+
+
+
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -275,8 +327,8 @@ const workout = {
 
 //let context1 = myFunc
 //let context1 = window
-//let context1 = global
-// let context1 = workout
+// let context1 = global
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -288,7 +340,7 @@ function myFunc() {
   return this
 }
 
-//let context2 = myFunc
-// let context2 = window
+// let context2 = myFunc
+let context2 = window
 //let context2 = global
 //let context2 = workout
