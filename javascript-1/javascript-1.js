@@ -114,7 +114,7 @@ let compareNums = (num1, num2) => {
 
 //DO NOT EDIT CODE BELOW
   const shapes = {
-    triangle: 3,
+    triangle: 3, // key = triangle, value = 3
     square: 4, 
     rectangle: 4,
     pentagon: 5,
@@ -132,11 +132,12 @@ let compareNums = (num1, num2) => {
 //CODE HERE
 // let newShapes = []  
 
-// for(key in shapes) {
-//     if(key = % 2 == 1) {
-//         delete.key;
-//     }
-// }
+for(let key in shapes) {
+    let value = shapes[key] // value = 3
+    if(value % 2 !== 0) { // return true if odd number
+        delete shapes[key];
+    }
+}
 
 
   
@@ -167,7 +168,7 @@ const classes = [
       time: 1,
       inPerson: true,
       homework: true
-    }
+    },
   ]
 //DO NOT EDIT CODE ABOVE
   
@@ -178,17 +179,27 @@ const classes = [
     If they are true, change them to false so that now you have 
     all online classes with no homework.
 */
-
 //CODE HERE
-//   for(let i = 0; i < classes.length; i++) {
-//     for(let j = i + 1; j < classes.length; j++){
-//         if(classes.inPerson == true){
-//             return false;
-//         } else if(class.homework == true) {
-//             return false;
-//         }
-//     }
-//   }
+  for(let i = 0; i < classes.length; i++) {
+      //let classObject = classes[i];
+      /* First Iteration classObject
+      {
+      title: 'JavaScript 101',
+      instructor: 'Emily',
+      days: ['M', 'W', 'F'],
+      time: 11,
+      inPerson: false,
+      homework: true
+    },
+      */
+    for(let key in classes[i]){ 
+        // first iteration -> key = "title"
+        //let value = classObject[key] // value = "Javascript 101"
+        if(classes[i][key] === true) {
+            classes[i][key] = false;
+        }
+    }   
+  }
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -205,7 +216,9 @@ let pairsArray = []
 
 //CODE HERE
 
-    
+// for(let i = 0; i < lettersToPair.length; i++){
+
+// }
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
 /*
@@ -221,7 +234,12 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+function Dog(name, age, breed, tricks) {
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks = tricks;
+}
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
@@ -230,7 +248,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+  let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -240,7 +258,9 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+function bark(name) {
+    return `${this.name} says bark!` 
+}
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -248,7 +268,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+  let fidoSpeak = bark.call(fido);
   
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -256,10 +276,16 @@ let pairsArray = []
     and push that trick into a trick's array and return the updated array.
     You will give context to 'techTrick' using the .bind method.
     Tricks will come from that context, so you should reference 'this.tricks' to access the correct array.
+
+    
 */
 
 //CODE HERE
-
+function teachTrick(trick) {
+    // trick array .push(trick)
+    this.tricks.push(trick);
+    return this.tricks;
+}
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -267,7 +293,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+  let teachStay = teachTrick.bind(fido, 'stay');
   
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -278,7 +304,9 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+// function dogIntro(treat, toy) {
+//     return `${this.name} is a ${this.breed} that loves ${this.treat} and their ${this.toy}!`
+// }
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -287,7 +315,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+//   let fidoIntro = dogIntro.apply(fido, 'chicken', 'tennis ball');
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -298,7 +326,14 @@ let pairsArray = []
 
 //CODE HERE
 
-  
+  function Phone(brand, model, storage, color, sold){
+      this.brand = brand;
+      this.model = model;
+      this.storage = storage;
+      this.color = color;
+      this.sold = sold;
+
+  }
 /*
     Next make three new phones using your constructor function.
     Save them to the variables below (make sure you uncomment them).
@@ -311,11 +346,11 @@ let pairsArray = []
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = new Phone('apple', 'iphone', 12, 'white', false);
   
-  // let phone2 = 
+  let phone2 = new Phone('samsung', 'galaxy', 21, 'black', false);
   
-  // let phone3 = 
+  let phone3 = new Phone('google', 'pixel', 3, 'black', false);
   
 /*
     Last, add a prototype method to Phone.
@@ -327,4 +362,13 @@ let pairsArray = []
 
 //CODE HERE
 
-  
+Phone.prototype.sell = function() {
+    for(let i = 0; i < Phone.length; i++) {
+      for(let key in Phone[i]){ 
+          if(Phone[i][key] === false) {
+              Phone[i][key] = true;
+            }
+        }
+    }
+    return `${Phone.brand} ${Phone.model} has been sold`; 
+}
