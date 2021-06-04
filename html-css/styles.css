@@ -1,6 +1,3 @@
-body {
-  font-family: @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-}
 header {
 width: 100vw;
 height: 100px;
@@ -13,6 +10,7 @@ justify-content: space-around;
 font-size: x-large;
 position: sticky;
 align-self: flex-start;
+
 }
 h1 {
   color: rgb(42, 171, 226);
@@ -36,6 +34,7 @@ nav {
 .links:hover{
   cursor: pointer;
   color:rgb(42, 171, 226);
+  font-weight: bold;
 }
 .middle-content {
   display: flex;
@@ -74,7 +73,7 @@ pop-art {
 }
 .img-gallery {
   display: flex;
-  width: 80vw;
+  /* width: 80vw; */
 }
 .img-gal-text {
   position: absolute;

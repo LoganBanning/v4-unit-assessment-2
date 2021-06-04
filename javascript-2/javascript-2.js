@@ -95,11 +95,11 @@ const products = [
 */
 
 //CODE HERE
-let saleProducts = products.map(function(element, index, array){
-  if(element === 'price') {
-    return 'price' * .75;
-  }
-})
+// let saleProducts = products.map(function(element, index, array){
+//   if(element === 'price') {
+//     return ('price' * .75);
+//   }
+// })
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -110,13 +110,15 @@ let saleProducts = products.map(function(element, index, array){
   (Hint: look up the array method 'includes' on MDN)
 */
 
-// let blueProducts = products.filter(function filterBlueProducts(
-//   if(products.color.includes('blue')) {
-//     return products.name;
-//   }
-// ))
+
 //CODE HERE
 
+
+// let blueProducts = products.filter(() => {
+//   if(color.includes('blue')){
+//     return color;
+//   }
+// })
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
